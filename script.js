@@ -24,7 +24,7 @@ featureNames.forEach((name, i) => {
 });
 
 // Load ONNX model (must be in same folder as this file)
-let sessionPromise = ort.InferenceSession.create("energy_model.onnx");
+let sessionPromise = ort.InferenceSession.create("energy_Deep.onnx");
 
 document.getElementById("predictBtn").onclick = async () => {
   const session = await sessionPromise;
@@ -50,3 +50,4 @@ document.getElementById("predictBtn").onclick = async () => {
   // Display prediction
   document.getElementById("prediction").innerText = output.data[0].toFixed(3);
 };
+
