@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Energy Efficiency Regression (ONNX)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+    input {
+      width: 120px;
+      padding: 5px;
+      margin: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Energy Efficiency Regression</h1>
+  <p>Enter the 8 building parameters to predict <strong>Heating Load (Y1)</strong> using your ONNX model deployed in the browser.</p>
+
+  <div id="inputs"></div>
+
+  <button id="predictBtn">Predict</button>
+
+  <h2>Prediction: <span id="prediction">-</span></h2>
+
+  <!-- Load ONNX Runtime Web -->
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
